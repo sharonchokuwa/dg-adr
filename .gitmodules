@@ -1,0 +1,6 @@
+[submodule "fundus_image_generation/finetune_dreambooth/diffusers"]
+	path = fundus_image_generation/finetune_dreambooth/diffusers
+	url = https://github.com/huggingface/diffusers.git
+[submodule "fundus_image_generation/finetune_textual_inversion/dr_aug/stable-diffusion"]
+	path = fundus_image_generation/finetune_textual_inversion/dr_aug/stable-diffusion
+	url = https://github.com/CompVis/stable-diffusion.git

@@ -1,0 +1,24 @@
+python main.py \
+--root /datasets \
+--algorithm DG_ADR \
+--desc dg_adr_seed0 \
+--seed 0 \
+--val_epochs 5 \
+--num_epochs 200 \
+--lr 1e-3 \
+--batch_size 128 \
+--val_batch_size 256 \
+--weight_decay 0.0005 \
+--optim sgd \
+--sd_param 0 \
+--project_name dg_adr_seed0  \
+--ssl_pretrained \
+--checkpoint_path imagenet_pretrained/checkpoint_0200.pth.tar \
+--trivial_aug \
+--use_syn \
+--dropout 0 \
+--warm_up_epochs 0 \
+--k 5 \
+--margin 0.1 \
+--loss_alpha 10.0 \
+--weight_loss_alpha 1.0 \

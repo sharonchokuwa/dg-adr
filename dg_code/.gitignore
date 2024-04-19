@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SSL Initialization weights
+ssl_weights/
+
+# Experiment Results and Logs
+result/
+

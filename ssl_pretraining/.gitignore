@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pretrained Model
+pretrained_weights/
+
+# Experiment Results and Logs
+runs/
+
