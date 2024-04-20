@@ -92,4 +92,4 @@ python main.py \
 ```
 
 ### References
-This repository uses some codes from [DGDR](https://github.com/chehx/DGDR), [SimCLR]( https://github.com/sthalles/SimCLR )and [DA-Fusion](https://github.com/brandontrabucco/da-fusion)
+This repository uses some codes from [DGDR](https://github.com/chehx/DGDR), [SimCLR](https://github.com/sthalles/SimCLR) and [DA-Fusion](https://github.com/brandontrabucco/da-fusion)
