@@ -123,13 +123,7 @@ class ResNet_VAE(nn.Module):
 
     def loss_function(self, x, y):
         recon_x, mu, logvar, y_hat = self.forward(x)
-        min_x = torch.min(x)
-        max_x = torch.max(x)
-        target_min = 0
-        target_max = 1
-        # Rescale x to the target range [0, 1]
-        rescaled_x = ((x - min_x) / (max_x - min_x)) * (target_max - target_min) + target_min
-        recon_loss = F.binary_cross_entropy(recon_x, rescaled_x, reduction='sum')
+        recon_loss = F.mse_loss(recon_x, x, reduction='sum')
         KLD = -0.5 * torch.mean(1 + logvar - mu.pow(2) - logvar.exp())
 
         CE_y = F.cross_entropy(y_hat, y, reduction='sum')
