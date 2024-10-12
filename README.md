@@ -1,32 +1,11 @@
-## Domain-Generalized Diabetic Retinopathy Augmentations with Domain Alignment for Cross Domain Generalization
+## DG-ADR (WACV 2025)
+
+Official PyTorch implementation of Divergent Domains, Convergent Grading: Enhancing Generalization in Diabetic Retinopathy Grading (WACV 2025)
+
+Sharon Chokuwa and Muhammad H. Khan
 
 ## Abstract 
-Diabetic Retinopathy (DR), constituting 5% of global blindness cases, arises from pro-
-longed Diabetes Mellitus (DM). Recent findings indicate a significant rise projected to
-escalate to an alarming 1.3 billion by 2050. As the DM burden intensifies, so does the
-prevalence of DR, necessitating a thorough exploration of efficient grading methodologies.
-While numerous deep learning approaches have sought to enhance traditional DR grading
-methods, they often falter when confronted with new unseen test data featuring different
-distributions to training distributions thus impeding their widespread application.
-In this study, we introduce a novel deep learning method for achieving domain general-
-ization (DG) in DR classification and make the following contributions. First, we propose
-a new way of generating image-to-image diagnostically relevant fundus augmentations con-
-ditioned on the grade of the original fundus image. These augmentations are tailored to
-emulate the types of shifts in DR datasets. Second, we address the limitations of standard
-classification loss in DG for DR fundus datasets by proposing a new DG-specific loss –
-alignment loss. Third, we tackle the coupled problem of data imbalance across domains
-and categories by proposing to employ Focal loss which seamlessly integrates with our
-new alignment loss. Fourth, we address the inevitable issue of observer variability in DR
-diagnosis, which consequently induces label noise, hindering the model’s ability to learn
-domain-agnostic features that can be generalized to unseen target domains. To mitigate
-this challenge, we propose leveraging SSL pretraining, even in scenarios where only a lim-
-ited dataset of non-DR fundus images is accessible for pretraining.
-Our method demonstrates significant improvements, yielding gains of 5.5%, 3.8%, and
-5.8% in accuracy, AUC, and F1-score, respectively, over the strong Empirical Risk Mini-
-mization (ERM) baseline. Furthermore, compared to GDRNet, a recently proposed state-
-of-the-art DG method for DR, our approach achieves gains of 3.5%, 1.5%, and 3.5% in
-accuracy, AUC, and F1-score, respectively. These results underscore the relative superior-
-ity of our method in addressing the challenges posed by domain shift in DR diagnosis.
+Diabetic Retinopathy (DR) constitutes 5% of global blindness cases. While numerous deep learning approaches have sought to enhance traditional DR grading methods, they often falter when confronted with new out-of-distribution data thereby impeding their widespread application. In this study, we introduce a novel deep learning method for achieving domain generalization (DG) in DR grading and make the following contributions. First, we propose a new way of generating image-to-image diagnostically relevant fundus augmentations conditioned on the grade of the original fundus image. These augmentations are tailored to emulate the types of shifts in DR datasets thus increase the model's robustness. Second, we address the limitations of the standard classification loss in DG for DR fundus datasets by proposing a new DG-specific loss – domain alignment loss;  which ensures that the feature vectors from all domains corresponding to the same class converge onto the same manifold for better domain generalization. Third, we tackle the coupled problem of data imbalance across DR domains and classes by proposing to employ Focal loss which seamlessly integrates with our new alignment loss. Fourth, due to inevitable observer variability in DR diagnosis that induces label noise, we propose leveraging self-supervised pretraining. This approach ensures that our DG model remains robust against early susceptibility to label noise, even when only a limited dataset of non-DR fundus images is available for pretraining. Our method demonstrates significant improvements over the strong Empirical Risk Minimization baseline and other recently proposed state-of-the-art DG methods for DR grading.
 
 ## Method
 <img src="figures/method.png" alt="picture alt" width="80%">
@@ -90,6 +69,12 @@ python main.py \
 --loss_alpha 10.0 \
 --weight_loss_alpha 1.0 \
 ```
+
+### Pretrained Models
+[SSL pretrained checkpoint](https://drive.google.com/file/d/10Da5KFJwjNUgRyWdOEpVia7zQGv1z9cl/view?usp=sharing)
+[Textual Inversion embeddings](https://drive.google.com/drive/folders/1fgBJ07uEWXN2u-UoEy-bqAJZYPKQk-7j?usp=sharing)
+[Dreambooth checkpoint]() - Not shared since they are too large, but can be reproduced using the same datasets as mentioned above and the reference code from [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth). We used the follwoing training scripts for this part [finetune_dreambooth_grade_0.sh)](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_0.sh), [finetune_dreambooth_grade_1.sh)](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_1.sh),[finetune_dreambooth_grade_2.sh)](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_2.sh),[finetune_dreambooth_grade_3.sh)](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_3.sh),[finetune_dreambooth_grade_4.sh)](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_4.sh).
+[DG checkpoints](https://drive.google.com/drive/folders/1qeqwqNOMuAGQz8_AB5w7krZStZ4R6XXV?usp=sharing)
 
 ### References
 This repository uses some codes from [DGDR](https://github.com/chehx/DGDR), [SimCLR](https://github.com/sthalles/SimCLR) and [DA-Fusion](https://github.com/brandontrabucco/da-fusion)
