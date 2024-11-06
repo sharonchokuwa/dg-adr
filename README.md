@@ -4,7 +4,7 @@ Official Code implementation of [Divergent Domains, Convergent Grading: Enhancin
 Accepted at WACV 2025
 
 Authors: Sharon Chokuwa and Muhammad Haris Khan
-[![arXiv](https://img.shields.io/badge/any_text-you_like-blue)](https://arxiv.org/abs/2411.02614)
+
 
 <img src="figures/synthetic_images.png" alt="picture alt" width="80%">
 
