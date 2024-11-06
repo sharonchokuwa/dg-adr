@@ -110,16 +110,16 @@ python main.py \
 
 
 ### Qualitative Results
-<img src="figures/features_tsne.png" alt="picture alt" width="90%">
+<img src="figures/features_tsne.png" alt="picture alt" width="100%">
 
 ### Pretrained Models
-[SSL pretrained checkpoint](https://drive.google.com/file/d/10Da5KFJwjNUgRyWdOEpVia7zQGv1z9cl/view?usp=sharing)
+1. [SSL pretrained checkpoint](https://drive.google.com/file/d/10Da5KFJwjNUgRyWdOEpVia7zQGv1z9cl/view?usp=sharing)
 
-[Textual Inversion embeddings](https://drive.google.com/drive/folders/1fgBJ07uEWXN2u-UoEy-bqAJZYPKQk-7j?usp=sharing)
+2. [Textual Inversion embeddings](https://drive.google.com/drive/folders/1fgBJ07uEWXN2u-UoEy-bqAJZYPKQk-7j?usp=sharing)
 
-[Dreambooth checkpoint]() - Not shared since they are too large, but can be reproduced using the same datasets as mentioned above and the reference code from [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth). We used the following training scripts for this part [finetune_dreambooth_grade_0.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_0.sh),  [finetune_dreambooth_grade_1.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_1.sh),  [finetune_dreambooth_grade_2.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_2.sh), [finetune_dreambooth_grade_3.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_3.sh), [finetune_dreambooth_grade_4.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_4.sh).
+3. [Dreambooth checkpoint]() - Not shared since they are too large, but can be reproduced using the same datasets as mentioned above and the reference code from [DreamBooth training example](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth). We used the following training scripts for this part [finetune_dreambooth_grade_0.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_0.sh),  [finetune_dreambooth_grade_1.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_1.sh),  [finetune_dreambooth_grade_2.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_2.sh), [finetune_dreambooth_grade_3.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_3.sh), [finetune_dreambooth_grade_4.sh](https://github.com/sharonchokuwa/dg-adr/blob/master/fundus_image_generation/finetune_dreambooth/training_scripts/finetune_dreambooth_grade_4.sh).
 
-[DG checkpoints](https://drive.google.com/drive/folders/1qeqwqNOMuAGQz8_AB5w7krZStZ4R6XXV?usp=sharing)
+4. [DG checkpoints](https://drive.google.com/drive/folders/1qeqwqNOMuAGQz8_AB5w7krZStZ4R6XXV?usp=sharing)
 
 
 ### Citation
